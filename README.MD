@@ -1,4 +1,8 @@
 # ngx-messages
+I solely missed `ng-messages` directive from AngularJs, so I created this one to use in Angular 2+.
+In contrast to the one from AngularJs, this one requires you to pass control to the directive, instead of its errors.
+This allowed me to hook in to the status of control, like its `dirty` state, and display validation messages according to that status.
+A nice side effect of that decision is less boilerplate code.
 
 ## Installation
 
@@ -84,6 +88,14 @@ By default, ngx-messages only show errors when input is dirty. Howeverm you can 
   bootstrap: [MyComponent]
 })
 export class MyAppModule {}
+```
+
+## Styling messages
+Just include something similar to the following in your global css file:
+```css
+[val-message] {
+  color: red;
+}
 ```
 
 ## Development
