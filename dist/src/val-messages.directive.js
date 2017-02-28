@@ -29,7 +29,6 @@ var ValMessagesDirective = (function () {
             this.calculateMessagesVisibility();
         }
         this.control.statusChanges.subscribe(function (s) {
-            console.log('this.control.invalid', _this.control.invalid, _this.control.errors);
             _this.calculateMessagesVisibility();
         });
     };
