@@ -28,7 +28,7 @@ var ValMessagesDirective = (function () {
         if (!this.config.showErrorsOnlyIfInputDirty) {
             this.calculateMessagesVisibility();
         }
-        this.control.statusChanges.subscribe(function (s) {
+        this.control.statusChanges.subscribe(function () {
             _this.calculateMessagesVisibility();
         });
     };
