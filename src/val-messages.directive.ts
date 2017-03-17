@@ -24,7 +24,7 @@ export class ValMessagesDirective implements AfterContentInit {
       this.calculateMessagesVisibility();
     }
 
-    this.control.statusChanges.subscribe(s => {
+    this.control.statusChanges.subscribe(() => {
       this.calculateMessagesVisibility();
     });
   }
