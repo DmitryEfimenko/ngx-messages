@@ -35,7 +35,7 @@ var ValMessagesDirective = (function () {
     ValMessagesDirective.prototype.calculateMessagesVisibility = function () {
         var _this = this;
         if (this.control.invalid && this.control.errors) {
-            var canShow = (this.config.showErrorsOnlyIfInputDirty && this.control.dirty) || true;
+            var canShow = (this.config.showErrorsOnlyIfInputDirty && this.control.dirty) || !this.config.showErrorsOnlyIfInputDirty;
             if (canShow) {
                 var errKeys_1 = Object.keys(this.control.errors);
                 // var errDisplayed makes only one err show
@@ -49,6 +49,9 @@ var ValMessagesDirective = (function () {
                         message.hide();
                     }
                 });
+            }
+            else {
+                this._errorChildren.forEach(function (x) { return x.hide(); });
             }
         }
         else {

@@ -31,7 +31,7 @@ export class ValMessagesDirective implements AfterContentInit {
 
   private calculateMessagesVisibility() {
     if (this.control.invalid && this.control.errors) {
-      const canShow = (this.config.showErrorsOnlyIfInputDirty && this.control.dirty) || true;
+      const canShow = (this.config.showErrorsOnlyIfInputDirty && this.control.dirty) || !this.config.showErrorsOnlyIfInputDirty;
       if (canShow) {
         const errKeys = Object.keys(this.control.errors);
         // var errDisplayed makes only one err show
@@ -44,6 +44,8 @@ export class ValMessagesDirective implements AfterContentInit {
             message.hide();
           }
         });
+      } else {
+        this._errorChildren.forEach(x => x.hide());
       }
     } else {
       this._errorChildren.forEach(x => x.hide());
