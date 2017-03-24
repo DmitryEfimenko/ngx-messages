@@ -13,7 +13,7 @@ export class ValMessageDirective {
   show(message?: string) {
     if (this.useErrorValue) {
       const e: Element = this.el.nativeElement;
-      e.textContent = message;
+      e.textContent = message ? message : null;
     }
 
     this.display = 'block';

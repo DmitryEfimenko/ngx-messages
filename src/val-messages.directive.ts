@@ -38,7 +38,7 @@ export class ValMessagesDirective implements AfterContentInit {
         let errDisplayed = false;
         this._errorChildren.forEach(message => {
           if (!errDisplayed && errKeys.indexOf(message.messageFor) > -1) {
-            message.show(message.useErrorValue ? this.control.errors[message.messageFor] : undefined);
+            message.show(message.useErrorValue ? this.control.errors![message.messageFor] : undefined);
             errDisplayed = true;
           } else {
             message.hide();
