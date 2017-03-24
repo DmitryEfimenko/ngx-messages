@@ -4,7 +4,6 @@
   "scripts": {
     "build": "npm run tsc",
     "lint": "tslint src/**/*.ts",
-    "test": "tsc && karma start",
     "prepublish": "tsc",
     "tsc": "tsc"
   },
