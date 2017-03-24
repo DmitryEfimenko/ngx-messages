@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ValMessageDirective = (function () {
     function ValMessageDirective(el) {
@@ -18,7 +19,7 @@ var ValMessageDirective = (function () {
     ValMessageDirective.prototype.show = function (message) {
         if (this.useErrorValue) {
             var e = this.el.nativeElement;
-            e.textContent = message;
+            e.textContent = message ? message : null;
         }
         this.display = 'block';
     };
