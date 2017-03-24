@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var MessagesConfiguration = (function () {
     function MessagesConfiguration() {
         this.showErrorsOnlyIfInputDirty = true;
