@@ -6,6 +6,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
+    "strictNullChecks": true,
     "declaration": true,
     "outDir": "./dist",
     "typeRoots": [
