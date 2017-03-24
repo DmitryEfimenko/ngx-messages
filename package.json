@@ -1,10 +1,9 @@
 {
   "name": "ngx-messages",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "scripts": {
     "build": "npm run tsc",
     "lint": "tslint src/**/*.ts",
-    "test": "tsc && karma start",
     "prepublish": "tsc",
     "tsc": "tsc"
   },

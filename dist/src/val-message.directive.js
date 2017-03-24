@@ -18,7 +18,7 @@ var ValMessageDirective = (function () {
     ValMessageDirective.prototype.show = function (message) {
         if (this.useErrorValue) {
             var e = this.el.nativeElement;
-            e.textContent = message;
+            e.textContent = message ? message : null;
         }
         this.display = 'block';
     };
