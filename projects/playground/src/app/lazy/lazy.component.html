@@ -1,0 +1,11 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input type="text" formControlName="first" />
+
+  <div val-messages="first">
+    <span val-message="required">Please enter your user name</span>
+  </div>
+
+  <input type="text" formControlName="last" />
+
+  <button type="submit">Submit</button>
+</form>

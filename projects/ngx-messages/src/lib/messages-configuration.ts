@@ -1,8 +1,10 @@
 
 export interface IMessagesConfiguration {
-  showErrorsOnlyIfInputDirty: boolean;
+  showErrorsOnlyIfInputDirty?: boolean;
+  showErrorsWhenFormSubmitted?: boolean;
 }
 
 export class MessagesConfiguration implements IMessagesConfiguration {
-  showErrorsOnlyIfInputDirty = true;
+  showErrorsOnlyIfInputDirty ? = true;
+  showErrorsWhenFormSubmitted ? = false;
 }

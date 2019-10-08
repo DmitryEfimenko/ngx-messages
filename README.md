@@ -41,7 +41,7 @@ import {FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/for
   template: `
   <form novalidate [formGroup]="myForm" (ngSubmit)="checkEmail()">
     <input formControlName="email" placeholder="Email" type="email">
-    <div [val-messages]="myForm.get('email')">
+    <div val-messages="email">
       <span val-message="required">Please provide email address</span>
       <span val-message="server" useErrorValue="true"></span>
     </div>
@@ -82,7 +82,10 @@ By default, ngx-messages only show errors when input is dirty. Howeverm you can 
 @NgModule({
   imports: [
     BrowserModule,
-    NgxMessagesModule.configure({ showErrorsOnlyIfInputDirty: false }) // <-- include it in your app module with custom configuration
+    NgxMessagesModule.configure({ 
+      showErrorsOnlyIfInputDirty: false,
+      showErrorsWhenFormSubmitted: true
+    }) 
   ], 
   declarations: [MyComponent],
   bootstrap: [MyComponent]
