@@ -1,6 +1,6 @@
 {
   "name": "ngx-messages",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "peerDependencies": {
     "@angular/common": "^8.2.9",
     "@angular/core": "^8.2.9"

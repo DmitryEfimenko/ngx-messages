@@ -178,6 +178,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "playground"
+    }
+  },
+  "defaultProject": "playground",
+  "cli": {
+    "analytics": "151932da-6dd9-4394-a183-c2cf64ef781a"
+  }
 }
